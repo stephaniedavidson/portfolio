@@ -3,7 +3,7 @@ module.exports = {
     title: `Steph Davidson | design motion and code`,
     author: `Steph Davidson`,
     description: `portfolio`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://lorem.com/`,
     social: {
       twitter: `stephcd`,
     },
@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content/`,
         name: `blog`,
       },
     },

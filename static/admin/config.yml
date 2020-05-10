@@ -1,5 +1,6 @@
 backend:
-  name: Steph Davidson portfolio
+  name: git-gateway
+  branch: master
 
 media_folder: static/assets
 public_folder: assets

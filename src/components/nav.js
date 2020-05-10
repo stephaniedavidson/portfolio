@@ -12,7 +12,7 @@ function Nav() {
         const { author, social } = data.site.siteMetadata
         return (
           <Container>
-            <img src={logo} />
+            <img src={logo} alt="Steph Davidson portfolio" />
             <p>
               <strong>{author}</strong>
               <a href={`https://twitter.com/${social.twitter}`}>twitter</a>

@@ -1,23 +1,24 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-// import Image from "gatsby-image"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import logo from "./logo.gif"
 
-function Nav() {
+function Header() {
   return (
     <StaticQuery
       query={navQuery}
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <Container>
-            <img src={logo} alt="Steph Davidson portfolio" />
+          <Nav>
+            <Link to="./">
+              <img src={logo} alt={author} />
+            </Link>
             <p>
-              <strong>{author}</strong>
               <a href={`https://twitter.com/${social.twitter}`}>twitter</a>
             </p>
-          </Container>
+          </Nav>
         )
       }}
     />
@@ -37,8 +38,9 @@ const navQuery = graphql`
   }
 `
 
-const Container = styled.div`
+const Nav = styled.div`
   display: flex;
+  background: tomato;
 `
 
-export default Nav
+export default Header

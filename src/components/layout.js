@@ -1,65 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import styled from "styled-components"
+import Header from "../components/header"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+    // const { location, title, children } = this.props
+    const { children } = this.props
+    // const rootPath = `${__PATH_PREFIX__}/`
+    //if (location.pathname === rootPath)
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            marginTop: 0,
-            height: 0,
-            width: 0,
-            overflow: "hidden",
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={location.pathname === rootPath}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
     return (
       <Wrapper>
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-          }}
-        >
-          <header>{header}</header>
-          <main>{children}</main>
-        </div>
+        <Header />
+        <main>{children}</main>
+
         <Footer>© {new Date().getFullYear()} Steph Davidson</Footer>
       </Wrapper>
     )
@@ -67,7 +22,9 @@ class Layout extends React.Component {
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  padding: 1rem;
+  max-width: 1800px;
+  background: green;
 `
 
 const Footer = styled.footer`

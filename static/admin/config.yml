@@ -7,7 +7,7 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: content/blog
+    folder: content/index
     create: true
     fields:
       - { name: path, label: Path }

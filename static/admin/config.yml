@@ -7,9 +7,9 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: content/index
+  - name: work
+    label: Work
+    folder: content
     create: true
     fields:
       - { name: path, label: Path }

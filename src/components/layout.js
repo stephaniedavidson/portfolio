@@ -24,7 +24,7 @@ class Layout extends React.Component {
 const Wrapper = styled.div`
   padding: 1rem;
   max-width: 1800px;
-  background: green;
+  background: grey;
 `
 
 const Footer = styled.footer`

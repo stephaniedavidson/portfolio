@@ -17,13 +17,7 @@ class ProjectTemplate extends React.Component {
         />
 
         <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            display: `block`,
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
+        <p>{post.frontmatter.date}</p>
         <MDXRenderer>{post.body}</MDXRenderer>
       </Layout>
     )

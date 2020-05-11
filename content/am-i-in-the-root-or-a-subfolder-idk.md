@@ -5,3 +5,5 @@ title: Am I in the root or a subfolder idk
 description: blah
 ---
 blah
+
+![](assets/bob-peak-a-matter-of-seconds.jpg)

@@ -1,19 +1,29 @@
+# https://www.netlifycms.org/docs/configuration-options/
 backend:
   name: git-gateway
   repo: stephaniedavidson/portfolio
   branch: master
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 media_folder: static/assets
-public_folder: assets
+public_folder: /assets
 
 collections:
   - name: work
     label: Work
+    label_singular: "Work"
     folder: content
-    create: true
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
-      - { name: body, label: Body, widget: markdown }
+      - label: Title
+        name: title
+        widget: string
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"

@@ -15,27 +15,35 @@ public_folder: /assets
 collections:
   - name: work
     label: Work
-    label_singular: "Work"
     folder: content
-    path: "{{slug}}/index"
+    create: true
     media_folder: ""
     public_folder: ""
     fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: "Cover Image"
-        name: "image"
-        widget: "image"
-      - label: Date
-        name: date
-        widget: date
-      - label: Body
-        name: body
-        widget: "markdown"
-    # fields:
-    #   - { name: path, label: Path }
-    #   - { name: date, label: Date, widget: date }
-    #   - { name: title, label: Title }
-    #   - { name: description, label: Description }
-    #   - { name: body, label: Body, widget: markdown }
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: image, label: "Cover image", widget: image }
+      - { name: description, label: Description }
+      - { name: body, label: Body, widget: markdown }
+# collections:
+#   - name: work
+#     label: Work
+#     label_singular: "Work"
+#     folder: content
+#     path: "{{slug}}/index"
+#     media_folder: ""
+#     public_folder: ""
+#     fields:
+#       - label: Title
+#         name: title
+#         widget: string
+#       - label: "Cover Image"
+#         name: "image"
+#         widget: "image"
+#       - label: Date
+#         name: date
+#         widget: date
+#       - label: Body
+#         name: body
+#         widget: "markdown"

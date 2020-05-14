@@ -9,8 +9,8 @@ slug:
   clean_accents: true
   sanitize_replacement: "_"
 
-# media_folder: static/assets
-# public_folder: /assets
+media_folder: static/assets
+public_folder: /assets
 
 collections:
   - name: work
@@ -27,3 +27,15 @@ collections:
       - label: "Cover Image"
         name: "image"
         widget: "image"
+      - label: Date
+        name: date
+        widget: date
+      - label: Body
+        name: body
+        widget: "markdown"
+    # fields:
+    #   - { name: path, label: Path }
+    #   - { name: date, label: Date, widget: date }
+    #   - { name: title, label: Title }
+    #   - { name: description, label: Description }
+    #   - { name: body, label: Body, widget: markdown }

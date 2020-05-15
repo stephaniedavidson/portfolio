@@ -17,6 +17,7 @@ class ProjectTemplate extends React.Component {
         />
 
         <h1>{post.frontmatter.title}</h1>
+        <h2>test i am the slug {post.frontmatter.slug}</h2>
         <p>{post.frontmatter.date}</p>
         <MDXRenderer>{post.body}</MDXRenderer>
       </Layout>

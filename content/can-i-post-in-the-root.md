@@ -1,5 +1,6 @@
 ---
 path: what
+slug: testing-slug
 date: 2020-05-10T18:49:18.262Z
 title: Can I post in the root
 description: I am a description

@@ -20,7 +20,6 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      # - { name: path, label: Path }
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }

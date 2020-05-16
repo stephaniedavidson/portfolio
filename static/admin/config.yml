@@ -17,12 +17,14 @@ collections:
     label: Work
     folder: content
     create: true
+    path: "{{slug}}"
+    identifier_field: slug
     media_folder: ""
     public_folder: ""
     fields:
-      - { name: slug, label: Slug }
+      - { name: slug, label: Slug, widget: string }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
-      - { name: image, label: "Cover image", widget: image }
+      - { name: cover, label: "Cover image", widget: image }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }

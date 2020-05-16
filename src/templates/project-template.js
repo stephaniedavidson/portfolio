@@ -16,6 +16,7 @@ class ProjectTemplate extends React.Component {
           description={post.frontmatter.description}
         />
 
+        <img src={post.frontmatter.cover} />
         <h1>{post.frontmatter.title}</h1>
         <h2>the slug should appear here!! {post.frontmatter.slug}</h2>
         <p>{post.frontmatter.date}</p>

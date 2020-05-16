@@ -28,11 +28,11 @@ class Blog extends React.Component {
                   </Link>
                 </h3>
                 <small>{node.frontmatter.date}</small>
-                <p
+                {/* <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
-                />
+                /> */}
               </div>
             )
           })}
@@ -61,7 +61,6 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
           }
         }
       }

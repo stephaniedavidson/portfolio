@@ -27,5 +27,4 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: cover, label: "Cover image", widget: image }
-      # - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }

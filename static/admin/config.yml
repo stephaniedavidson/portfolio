@@ -18,7 +18,7 @@ collections:
     folder: content
     create: true
     path: "{{slug}}"
-    identifier_field: slug
+    identifier_field: title
     media_folder: ""
     public_folder: ""
     fields:

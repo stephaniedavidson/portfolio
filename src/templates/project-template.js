@@ -11,10 +11,7 @@ class ProjectTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description}
-        />
+        <SEO title={post.frontmatter.title} />
 
         <img src={post.frontmatter.cover} />
         <h1>{post.frontmatter.title}</h1>

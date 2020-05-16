@@ -15,9 +15,10 @@ public_folder: /assets
 collections:
   - name: work
     label: Work
+    label_singular: "Work"
     folder: content
-    create: true
-    path: "{{slug}}"
+    # create: true
+    path: "{{slug}}/index"
     identifier_field: title
     media_folder: ""
     public_folder: ""
@@ -26,5 +27,5 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: cover, label: "Cover image", widget: image }
-      - { name: description, label: Description }
+      # - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }

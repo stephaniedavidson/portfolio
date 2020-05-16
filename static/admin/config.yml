@@ -17,7 +17,7 @@ collections:
     label: Work
     label_singular: "Work"
     folder: content
-    # create: true
+    create: true
     path: "{{slug}}/index"
     identifier_field: title
     media_folder: ""

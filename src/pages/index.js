@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -27,6 +28,7 @@ class Blog extends React.Component {
                     {title}
                   </Link>
                 </h3>
+                <Img fluid={node.frontmatter.cover.childImageSharp.fluid} />
                 <small>{node.frontmatter.date}</small>
                 {/* <p
                   dangerouslySetInnerHTML={{
@@ -59,8 +61,16 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY")
             title
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 900) {
+                  ...GatsbyImageSharpFluid_noBase64
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+                }
+              }
+            }
           }
         }
       }

@@ -1,7 +1,7 @@
 import React from "react"
-// import { Link } from "gatsby"
 import styled from "styled-components"
 import Header from "../components/header"
+import GlobalStyle from "../components/GlobalStyle"
 
 class Layout extends React.Component {
   render() {
@@ -12,6 +12,7 @@ class Layout extends React.Component {
 
     return (
       <Wrapper>
+        <GlobalStyle />
         <Header />
         <main>{children}</main>
 
@@ -24,12 +25,10 @@ class Layout extends React.Component {
 const Wrapper = styled.div`
   padding: 1rem;
   max-width: 1800px;
-  background: grey;
 `
 
 const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
+  font-size: 0.75rem;
 `
 
 export default Layout

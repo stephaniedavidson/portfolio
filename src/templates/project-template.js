@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,8 +13,8 @@ class ProjectTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
-
-        <img src={post.frontmatter.cover} />
+        <h2>the cover should be below</h2>
+        <Img fluid={post.frontmatter.cover.childImageSharp.fluid} />
         <h1>{post.frontmatter.title}</h1>
         <h2>the slug should appear here!! {post.frontmatter.slug}</h2>
         <p>{post.frontmatter.date}</p>
@@ -38,7 +39,15 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY")
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 1800) {
+              ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluidLimitPresentationSize
+            }
+          }
+        }
       }
     }
   }

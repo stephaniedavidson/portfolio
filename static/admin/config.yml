@@ -18,7 +18,7 @@ collections:
     label_singular: "Work"
     folder: content
     create: true
-    path: "{{slug}}/index"
+    path: "{{fields.slug}}/index"
     identifier_field: title
     media_folder: ""
     public_folder: ""
@@ -26,5 +26,6 @@ collections:
       - { name: slug, label: Slug, widget: string }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: "tags", label: "Tags", widget: "list" }
       - { name: cover, label: "Cover image", widget: image }
       - { name: body, label: Body, widget: markdown }

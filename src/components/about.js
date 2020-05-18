@@ -1,7 +1,4 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
+/*
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
@@ -10,10 +7,10 @@ import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
 
-function Bio() {
+function About() {
   return (
     <StaticQuery
-      query={bioQuery}
+      query={aboutQuery}
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
@@ -23,14 +20,13 @@ function Bio() {
               alt={author}
               style={{
                 minWidth: 50,
-                borderRadius: `100%`,
               }}
               imgStyle={{
                 borderRadius: `50%`,
               }}
             />
             <p>
-              Written by <strong>{author}</strong>
+              <strong>{author}</strong>
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 You should follow her on Twitter
@@ -43,11 +39,11 @@ function Bio() {
   )
 }
 
-const bioQuery = graphql`
+const aboutQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/aura.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 200, height: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -67,4 +63,4 @@ const Container = styled.div`
   display: flex;
 `
 
-export default Bio
+export default About

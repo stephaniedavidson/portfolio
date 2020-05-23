@@ -4,6 +4,8 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import styled from "styled-components"
 // import Button from "../components/button"
 
 class Blog extends React.Component {
@@ -19,7 +21,7 @@ class Blog extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
+              <Item key={node.fields.slug}>
                 <h3>
                   <Link
                     style={{ boxShadow: `none` }}
@@ -28,14 +30,26 @@ class Blog extends React.Component {
                     {title}
                   </Link>
                 </h3>
-                <Img fluid={node.frontmatter.cover.childImageSharp.fluid} />
+                {node.frontmatter.cover.extension === "mp4" ? (
+                  <video
+                    width="100%"
+                    loop
+                    autoPlay
+                    muted
+                    playsInline
+                    preload="none"
+                    src={node.frontmatter.cover.publicURL}
+                  />
+                ) : (
+                  <Img fluid={node.frontmatter.cover.childImageSharp.fluid} />
+                )}
                 <small>{node.frontmatter.date}</small>
                 {/* <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 /> */}
-              </div>
+              </Item>
             )
           })}
         </div>
@@ -64,6 +78,8 @@ export const pageQuery = graphql`
             date(formatString: "YYYY")
             title
             cover {
+              extension
+              publicURL
               childImageSharp {
                 fluid(maxWidth: 900) {
                   ...GatsbyImageSharpFluid_noBase64
@@ -75,5 +91,12 @@ export const pageQuery = graphql`
         }
       }
     }
+  }
+`
+
+const Item = styled.div`
+  padding: 1rem;
+  img {
+    max-width: 400px;
   }
 `

@@ -13,8 +13,19 @@ class ProjectTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
-        <h2>the cover should be below</h2>
-        <Img fluid={post.frontmatter.cover.childImageSharp.fluid} />
+        {post.frontmatter.cover.extension === "mp4" ? (
+          <video
+            width="100%"
+            loop
+            autoPlay
+            muted
+            playsInline
+            preload="none"
+            src={post.frontmatter.cover.publicURL}
+          />
+        ) : (
+          <Img fluid={post.frontmatter.cover.childImageSharp.fluid} />
+        )}
         <h1>{post.frontmatter.title}</h1>
         <h2>the slug should appear here!! {post.frontmatter.slug}</h2>
         <p>{post.frontmatter.date}</p>
@@ -41,6 +52,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY")
         cover {
+          extension
+          publicURL
           childImageSharp {
             fluid(maxWidth: 1800) {
               ...GatsbyImageSharpFluid_noBase64

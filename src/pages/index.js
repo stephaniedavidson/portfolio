@@ -17,42 +17,39 @@ class Blog extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <div style={{ margin: "20px 0 40px" }}>
+        <Masonry>
+          {/* <div style={{ margin: "20px 0 40px" }}> */}
           {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
+            // const title = node.frontmatter.title || node.fields.slug
             return (
               <Item key={node.fields.slug}>
-                <h3>
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={`${node.fields.slug}`}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                {node.frontmatter.cover.extension === "mp4" ? (
-                  <video
-                    width="100%"
-                    loop
-                    autoPlay
-                    muted
-                    playsInline
-                    preload="none"
-                    src={node.frontmatter.cover.publicURL}
-                  />
-                ) : (
-                  <Img fluid={node.frontmatter.cover.childImageSharp.fluid} />
-                )}
-                <small>{node.frontmatter.date}</small>
-                {/* <p
+                <Link style={{ boxShadow: `none` }} to={`${node.fields.slug}`}>
+                  <h3>{node.frontmatter.title}</h3>
+                  {node.frontmatter.cover.extension === "mp4" ? (
+                    <video
+                      width="100%"
+                      loop
+                      autoPlay
+                      muted
+                      playsInline
+                      preload="none"
+                      src={node.frontmatter.cover.publicURL}
+                    />
+                  ) : (
+                    <Img fluid={node.frontmatter.cover.childImageSharp.fluid} />
+                  )}
+                  <small>{node.frontmatter.date}</small>
+                  {/* <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 /> */}
+                </Link>
               </Item>
             )
           })}
-        </div>
+          {/* </div> */}
+        </Masonry>
       </Layout>
     )
   }
@@ -93,10 +90,27 @@ export const pageQuery = graphql`
     }
   }
 `
+const Masonry = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+`
 
 const Item = styled.div`
+  width: 50%;
   padding: 1rem;
+  position: relative;
   img {
-    max-width: 400px;
+    width: 100%;
+  }
+  h3 {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    margin: 0;
   }
 `

@@ -9,7 +9,6 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify-cms-paths`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,

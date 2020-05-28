@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
 
 class ProjectTemplate extends React.Component {
   render() {
@@ -13,21 +14,23 @@ class ProjectTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
-        {post.frontmatter.cover.extension === "mp4" ? (
-          <video
-            width="100%"
-            loop
-            autoPlay
-            muted
-            playsInline
-            preload="none"
-            src={post.frontmatter.cover.publicURL}
-          />
-        ) : (
-          <Img fluid={post.frontmatter.cover.childImageSharp.fluid} />
-        )}
+        <Cover>
+          {post.frontmatter.cover.extension === "mp4" ? (
+            <video
+              width="100%"
+              loop
+              autoPlay
+              muted
+              playsInline
+              preload="none"
+              src={post.frontmatter.cover.publicURL}
+            />
+          ) : (
+            <Img fluid={post.frontmatter.cover.childImageSharp.fluid} />
+          )}
+        </Cover>
         <h1>{post.frontmatter.title}</h1>
-        <h2>the slug should appear here!! {post.frontmatter.slug}</h2>
+        <h2>the slug should appear here --> {post.frontmatter.slug}</h2>
         <p>{post.frontmatter.date}</p>
         <MDXRenderer>{post.body}</MDXRenderer>
       </Layout>
@@ -64,4 +67,9 @@ export const pageQuery = graphql`
       }
     }
   }
+`
+
+const Cover = styled.div`
+  width: 100%;
+  margin: 2rem 0;
 `

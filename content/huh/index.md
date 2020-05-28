@@ -6,6 +6,16 @@ tags:
   - illustration
 cover: 412243f404e1f5a4f0a1b29f6d48e45c.jpg
 ---
+
 ![](bobpeakcuface1536_master.jpg)
 
-<video type="video/mp4" controls="" src="crunched.mp4" />
+<video type="video/mp4" 
+        width="100%"
+        controls
+        type="video/mp4"
+        width="100%"
+        loop
+        autoPlay
+        muted
+        playsInline
+        preload="none" src="crunched.mp4" />

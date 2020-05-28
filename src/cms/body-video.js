@@ -17,12 +17,28 @@ export const EditorComponentVideo = {
 
   fromBlock: match => match && { video: match[1] },
 
+  //cms side
   toBlock: ({ video }) =>
-    `<video type="video/mp4" controls="" src="${String(video)}" />`,
+    `<video type="video/mp4" width="100%" type="video/mp4" loop autoPlay muted playsInline preload="none" controls src="${String(
+      video
+    )}" />`,
 
   toPreview: ({ video }, getAsset, fields) => {
     const videoField = fields[0]
     const src = getAsset(video, videoField)
-    return <video width="100%" controls src={src || ""} type="video/mp4" />
+    return (
+      <video
+        width="100%"
+        controls
+        type="video/mp4"
+        width="100%"
+        loop
+        autoPlay
+        muted
+        playsInline
+        preload="none"
+        src={src || ""}
+      />
+    )
   },
 }

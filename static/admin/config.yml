@@ -18,13 +18,13 @@ collections:
     label_singular: "Work"
     folder: content
     create: true
-    # path: "{{fields.slug}}/index"
+    # path: "{{custom_slug}}/index"
     path: "{{slug}}/index"
     identifier_field: title
     media_folder: ""
     public_folder: ""
     fields:
-      - { name: slug, label: Slug, widget: string }
+      # - { name: custom_slug, label: Slug, widget: string }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: "tags", label: "Tags", widget: "list" }

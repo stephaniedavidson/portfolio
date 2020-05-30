@@ -1,12 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 import styled from "styled-components"
-// import Button from "../components/button"
+import Masonry from "../utils/masonry"
 
 class Blog extends React.Component {
   render() {
@@ -18,14 +16,24 @@ class Blog extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Masonry>
-          {/* <div style={{ margin: "20px 0 40px" }}> */}
           {posts.map(({ node }) => {
-            // const title = node.frontmatter.title || node.fields.slug
             return (
               <Item key={node.fields.slug}>
-                <Link style={{ boxShadow: `none` }} to={`${node.fields.slug}`}>
+                <Link to={`${node.fields.slug}`}>
                   <h3>{node.frontmatter.title}</h3>
-                  {node.frontmatter.cover.extension === "mp4" ? (
+
+                  {node.frontmatter.cover.extension === "jpg" && (
+                    <Img
+                      fluid={node.frontmatter.cover.childImageSharp.fluid}
+                      imgStyle={{ objectFit: "contain" }}
+                      alt={node.frontmatter.title}
+                    />
+                    // <img src={node.frontmatter.cover.publicURL} />
+                  )}
+                  {node.frontmatter.cover.extension === "gif" && (
+                    <img src={node.frontmatter.cover.publicURL} />
+                  )}
+                  {node.frontmatter.cover.extension === "mp4" && (
                     <video
                       width="100%"
                       loop
@@ -35,15 +43,7 @@ class Blog extends React.Component {
                       preload="none"
                       src={node.frontmatter.cover.publicURL}
                     />
-                  ) : (
-                    <Img fluid={node.frontmatter.cover.childImageSharp.fluid} />
                   )}
-                  <small>{node.frontmatter.date}</small>
-                  {/* <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                /> */}
                 </Link>
               </Item>
             )
@@ -90,27 +90,34 @@ export const pageQuery = graphql`
     }
   }
 `
-const Masonry = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-`
-
 const Item = styled.div`
-  width: 50%;
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  cursor: pointer;
   position: relative;
-  img {
+  &:hover h3 {
+    opacity: 1;
+  }
+  img,
+  video {
     width: 100%;
   }
+  .gatsby-image-wrapper {
+    position: static !important;
+    min-height: 320px !important;
+  }
   h3 {
+    transition: all 0.3s ease;
+    text-align: center;
     position: absolute;
-    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #fff;
-    padding: 20px;
-    margin: 0;
+    background: white;
+    z-index: 2;
+    padding: 10px;
+    opacity: 0;
   }
 `

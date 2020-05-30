@@ -15,7 +15,10 @@ class ProjectTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
         <Cover>
-          {post.frontmatter.cover.extension === "mp4" ? (
+          {post.frontmatter.cover.extension === "jpg" && (
+            <Img fluid={post.frontmatter.cover.childImageSharp.fluid} />
+          )}
+          {post.frontmatter.cover.extension === "mp4" && (
             <video
               width="100%"
               loop
@@ -25,8 +28,9 @@ class ProjectTemplate extends React.Component {
               preload="none"
               src={post.frontmatter.cover.publicURL}
             />
-          ) : (
-            <Img fluid={post.frontmatter.cover.childImageSharp.fluid} />
+          )}
+          {post.frontmatter.cover.extension === "gif" && (
+            <img src={post.frontmatter.cover.publicURL} />
           )}
         </Cover>
         <h1>{post.frontmatter.title}</h1>

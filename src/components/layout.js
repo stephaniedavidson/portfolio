@@ -3,23 +3,20 @@ import styled from "styled-components"
 import Header from "../components/header"
 import GlobalStyle from "../components/GlobalStyle"
 
-class Layout extends React.Component {
-  render() {
-    // const { location, title, children } = this.props
-    const { children } = this.props
-    // const rootPath = `${__PATH_PREFIX__}/`
-    //if (location.pathname === rootPath)
+const Layout = props => {
+  // const { location, title, children } = this.props
+  const { setFilter, children } = props
+  // const rootPath = `${__PATH_PREFIX__}/`
+  //if (location.pathname === rootPath)
+  return (
+    <Wrapper>
+      <GlobalStyle />
+      <Header setFilter={setFilter} />
+      <main>{children}</main>
 
-    return (
-      <Wrapper>
-        <GlobalStyle />
-        <Header />
-        <main>{children}</main>
-
-        <Footer>© {new Date().getFullYear()} Steph Davidson</Footer>
-      </Wrapper>
-    )
-  }
+      <Footer>© {new Date().getFullYear()} Steph Davidson</Footer>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`

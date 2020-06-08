@@ -1,30 +1,36 @@
 import React from "react"
-// import { StaticQuery } from "gatsby"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import logo from "./logo.gif"
+// https://upmostly.com/tutorials/react-filter-filtering-arrays-in-react-with-examples
 
-function Header() {
+function Header(props) {
   return (
     <Nav>
-      <Link to="./">
-        <img src={logo} alt="Home" style={block} />
-      </Link>
+      <img
+        src={logo}
+        alt="Home"
+        style={block}
+        onClick={() => props.setFilter("all")}
+      />
       <Ul>
         <Li>
-          <Link to="/motion" style={linkStyle}>
+          <button
+            onClick={() => props.setFilter("illustration")}
+            style={linkStyle}
+          >
             Illustration
-          </Link>
+          </button>
         </Li>
         <Li>
-          <Link to="/motion" style={linkStyle}>
+          <button onClick={() => props.setFilter("design")} style={linkStyle}>
             Design and programming
-          </Link>
+          </button>
         </Li>
         <Li>
-          <Link to="/motion" style={linkStyle}>
+          <button onClick={() => props.setFilter("motion")} style={linkStyle}>
             Motion
-          </Link>
+          </button>
         </Li>
         <Li>
           <a
@@ -84,6 +90,10 @@ const block = {
 const linkStyle = {
   textDecoration: "none",
   color: "black",
+  background: "white",
+  border: "none",
+  fontSize: "1rem",
+  fontFamily: "Times New Roman",
 }
 
 export default Header

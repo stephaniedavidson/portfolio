@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
@@ -6,53 +6,65 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import Masonry from "../utils/masonry"
 
-class Blog extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMdx.edges
-
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Masonry>
-          {posts.map(({ node }) => {
-            return (
-              <Item key={node.fields.slug}>
-                <Link to={`${node.fields.slug}`}>
-                  <h3>{node.frontmatter.title}</h3>
-
-                  {node.frontmatter.cover.extension === "jpg" && (
-                    <Img
-                      fluid={node.frontmatter.cover.childImageSharp.fluid}
-                      imgStyle={{ objectFit: "contain" }}
-                      alt={node.frontmatter.title}
-                    />
-                    // <img src={node.frontmatter.cover.publicURL} />
-                  )}
-                  {node.frontmatter.cover.extension === "gif" && (
-                    <img src={node.frontmatter.cover.publicURL} />
-                  )}
-                  {node.frontmatter.cover.extension === "mp4" && (
-                    <video
-                      width="100%"
-                      loop
-                      autoPlay
-                      muted
-                      playsInline
-                      preload="none"
-                      src={node.frontmatter.cover.publicURL}
-                    />
-                  )}
-                </Link>
-              </Item>
-            )
-          })}
-          {/* </div> */}
-        </Masonry>
-      </Layout>
-    )
+const Blog = props => {
+  const { data } = props
+  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMdx.edges
+  const [filter, setFilter] = useState("all")
+  function filterTags(val) {
+    setFilter(val)
   }
+
+  return (
+    <Layout
+      filter={filter}
+      setFilter={filterTags}
+      location={props.location}
+      title={siteTitle}
+    >
+      <SEO title="All posts" />
+      <Masonry>
+        {posts.map(({ node }, i) => {
+          return node.frontmatter.tags.includes(filter) || filter === "all" ? (
+            <Item key={node.fields.slug} data-tags={node.frontmatter.tags}>
+              <Link to={`${node.fields.slug}`}>
+                <h3>{node.frontmatter.title}</h3>
+
+                {node.frontmatter.cover.extension === "jpg" && (
+                  <Img
+                    fluid={node.frontmatter.cover.childImageSharp.fluid}
+                    imgStyle={{ objectFit: "contain" }}
+                    alt={node.frontmatter.title}
+                  />
+                  // <img src={node.frontmatter.cover.publicURL} />
+                )}
+                {node.frontmatter.cover.extension === "gif" && (
+                  <img
+                    src={node.frontmatter.cover.publicURL}
+                    alt={node.frontmatter.title}
+                  />
+                )}
+                {node.frontmatter.cover.extension === "mp4" && (
+                  <video
+                    width="100%"
+                    loop
+                    autoPlay
+                    muted
+                    playsInline
+                    preload="none"
+                    src={node.frontmatter.cover.publicURL}
+                  />
+                )}
+                {node.frontmatter.tags.map(x => {
+                  return x + ` `
+                })}
+              </Link>
+            </Item>
+          ) : null
+        })}
+      </Masonry>
+    </Layout>
+  )
 }
 
 export default Blog
@@ -84,6 +96,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            tags
           }
         }
       }

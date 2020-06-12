@@ -6,18 +6,19 @@ import logo from "./logo.gif"
 function Header(props) {
   return (
     <Nav>
-      <img
-        src={logo}
-        alt="Home"
-        style={block}
-        onClick={() => props.setFilter("all")}
-      />
+      <Link to="/">
+        <img src={logo} alt="Home" style={{ display: "block" }} />
+      </Link>
       <Ul>
         <Li>
-          <Link to="/tagged/illustration">Illustration</Link>
+          <Link to="/tagged/illustration" activeClassName="active">
+            Illustration
+          </Link>
         </Li>
         <Li>
-          <Link to="/tagged/design">Design and programming</Link>
+          <Link to="/tagged/design" activeClassName="active">
+            Design and programming
+          </Link>
         </Li>
         <Li>
           <Link to="/tagged/motion">Motion</Link>
@@ -27,7 +28,6 @@ function Header(props) {
             href="http://bloombergcyber.tumblr.com"
             target="_blank"
             rel="noopener noreferrer"
-            style={linkStyle}
           >
             Art direction
           </a>
@@ -39,15 +39,12 @@ function Header(props) {
             href="http://steph.supply"
             target="_blank"
             rel="noopener noreferrer"
-            style={linkStyle}
           >
             Store
           </a>
         </Li>
         <Li>
-          <Link to="/about" style={linkStyle}>
-            About
-          </Link>
+          <Link to="/about">About</Link>
         </Li>
       </Ul>
     </Nav>
@@ -72,18 +69,14 @@ const Li = styled.li`
   &:hover {
     background: tomato;
   }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+  .active {
+    background: tomato;
+  }
 `
-const block = {
-  display: "block",
-}
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "black",
-  background: "white",
-  border: "none",
-  fontSize: "1rem",
-  fontFamily: "Times New Roman",
-}
 
 export default Header

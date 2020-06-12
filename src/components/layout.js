@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Header from "../components/header"
+import Nav from "./nav"
 import GlobalStyle from "../components/GlobalStyle"
 
 const Layout = props => {
@@ -11,7 +11,7 @@ const Layout = props => {
   return (
     <Wrapper>
       <GlobalStyle />
-      <Header setFilter={setFilter} />
+      <Nav />
       <main>{children}</main>
 
       <Footer>© {new Date().getFullYear()} Steph Davidson</Footer>

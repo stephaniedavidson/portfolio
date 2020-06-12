@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import logo from "./logo.gif"
-// https://upmostly.com/tutorials/react-filter-filtering-arrays-in-react-with-examples
 
 function Header(props) {
   return (
@@ -15,22 +14,13 @@ function Header(props) {
       />
       <Ul>
         <Li>
-          <button
-            onClick={() => props.setFilter("illustration")}
-            style={linkStyle}
-          >
-            Illustration
-          </button>
+          <Link to="/tagged/illustration">Illustration</Link>
         </Li>
         <Li>
-          <button onClick={() => props.setFilter("design")} style={linkStyle}>
-            Design and programming
-          </button>
+          <Link to="/tagged/design">Design and programming</Link>
         </Li>
         <Li>
-          <button onClick={() => props.setFilter("motion")} style={linkStyle}>
-            Motion
-          </button>
+          <Link to="/tagged/motion">Motion</Link>
         </Li>
         <Li>
           <a

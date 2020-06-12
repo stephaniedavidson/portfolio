@@ -1,10 +1,14 @@
 const path = require(`path`)
+const _ = require("lodash")
+
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const projectTemplate = path.resolve(`./src/templates/project-template.js`)
+  const tagTemplate = path.resolve("./src/templates/tagged.js")
+
   return graphql(
     `
       {
@@ -19,8 +23,14 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                tags
               }
             }
+          }
+        }
+        tagsGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___tags) {
+            fieldValue
           }
         }
       }
@@ -34,12 +44,25 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.allMdx.edges
 
     posts.forEach((post, index) => {
-      console.log(post.node.fields.slug)
       createPage({
         path: `${post.node.fields.slug}`,
         component: projectTemplate,
         context: {
           slug: post.node.fields.slug,
+        },
+      })
+    })
+
+    // Extract tag data from query
+    const tags = result.data.tagsGroup.group
+
+    // Make tag pages
+    tags.forEach(tag => {
+      createPage({
+        path: `/tagged/${_.kebabCase(tag.fieldValue)}/`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
         },
       })
     })

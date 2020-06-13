@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import Nav from "./nav"
-import GlobalStyle from "../components/GlobalStyle"
+import GlobalStyle from "../utils/GlobalStyle"
 
 const Layout = props => {
   // const { location, title, children } = this.props
-  const { setFilter, children } = props
+  const { children } = props
   // const rootPath = `${__PATH_PREFIX__}/`
   //if (location.pathname === rootPath)
   return (
@@ -22,6 +22,7 @@ const Layout = props => {
 const Wrapper = styled.div`
   padding: 1rem;
   max-width: 1800px;
+  font-size: 1.25rem;
   img,
   video {
     max-width: 100%;
@@ -29,7 +30,8 @@ const Wrapper = styled.div`
 `
 
 const Footer = styled.footer`
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  margin: 1rem 0 0.5rem 0;
 `
 
 export default Layout

@@ -29,7 +29,8 @@ function Header(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Art direction
+            Art direction&nbsp;
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAO0lEQVQoU2NkwA/+w6QZoQy4AJI+FDlkDoyNbAfIAJD4f3wKYYrAGgmZCFID1jBIFOILUbgbCYQ7AwMANv8RCL4FK5gAAAAASUVORK5CYII=" />
           </a>
         </Li>
       </Ul>
@@ -40,7 +41,8 @@ function Header(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Store
+            Store&nbsp;
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAO0lEQVQoU2NkwA/+w6QZoQy4AJI+FDlkDoyNbAfIAJD4f3wKYYrAGgmZCFID1jBIFOILUbgbCYQ7AwMANv8RCL4FK5gAAAAASUVORK5CYII=" />
           </a>
         </Li>
         <Li>
@@ -62,20 +64,23 @@ const Ul = styled.ul`
 `
 const Li = styled.li`
   display: inline-block;
-  border: 2px solid black;
-  padding: 3px 6px;
   margin: 0 0 0 6px;
-  transition: all 0.25s ease;
-  &:hover {
-    background: tomato;
-  }
+  padding: 6px;
   a {
+    /* border: 2px solid black; */
     text-decoration: none;
+    font-size: 1.5rem;
     color: black;
-    font-size: 1rem;
+    transition: all 0.25s ease;
+    &:hover {
+      color: crimson;
+      /* border: 2px solid crimson; */
+      /* background: lavenderblush; */
+    }
   }
   .active {
-    background: tomato;
+    color: green;
+    /* border: 2px solid green; */
   }
 `
 

@@ -16,7 +16,10 @@ class ProjectTemplate extends React.Component {
         <SEO title={post.frontmatter.title} />
         <Cover>
           {post.frontmatter.cover.extension === "jpg" && (
-            <Img fluid={post.frontmatter.cover.childImageSharp.fluid} />
+            <Img
+              fluid={post.frontmatter.cover.childImageSharp.fluid}
+              alt={post.frontmatter.title}
+            />
           )}
           {post.frontmatter.cover.extension === "mp4" && (
             <video
@@ -30,11 +33,13 @@ class ProjectTemplate extends React.Component {
             />
           )}
           {post.frontmatter.cover.extension === "gif" && (
-            <img src={post.frontmatter.cover.publicURL} />
+            <img
+              src={post.frontmatter.cover.publicURL}
+              alt={post.frontmatter.title}
+            />
           )}
         </Cover>
         <h1>{post.frontmatter.title}</h1>
-        <h2>the slug should appear here --> {post.frontmatter.slug}</h2>
         <p>{post.frontmatter.date}</p>
         <MDXRenderer>{post.body}</MDXRenderer>
       </Layout>

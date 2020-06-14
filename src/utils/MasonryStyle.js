@@ -1,22 +1,26 @@
 import styled from "styled-components"
 
 const Item = styled.div`
-  display: flex;
+  background: gold;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   overflow: visible;
   cursor: pointer;
   position: relative;
+  a {
+    background: greenyellow;
+  }
   &:hover h3 {
     opacity: 1;
   }
   img,
   video {
+    display: block;
     width: 100%;
   }
   .gatsby-image-wrapper {
-    position: static !important;
-    min-height: 320px !important;
+    /* position: static !important; */
   }
   h3 {
     transition: all 0.3s ease;
@@ -27,7 +31,7 @@ const Item = styled.div`
     transform: translate(-50%, -50%);
     background: white;
     z-index: 2;
-    padding: 10px;
+    /* padding: 10px; */
     opacity: 0;
   }
 `

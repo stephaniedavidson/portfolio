@@ -27,7 +27,7 @@ const Blog = props => {
                     alt={node.frontmatter.title}
                   />
                 )}
-                {node.frontmatter.cover.extension === "gif" && (
+                {node.frontmatter.cover.extens0ion === "gif" && (
                   <img
                     src={node.frontmatter.cover.publicURL}
                     alt={node.frontmatter.title}
@@ -44,9 +44,6 @@ const Blog = props => {
                     src={node.frontmatter.cover.publicURL}
                   />
                 )}
-                {node.frontmatter.tags.map(x => {
-                  return x + ` `
-                })}
               </Link>
             </Item>
           )

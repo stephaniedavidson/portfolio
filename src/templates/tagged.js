@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout.js"
 import Masonry from "../utils/masonry"
-import Item from "../utils/MasonryStyle"
+import { Item } from "../utils/masonryStyle"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -13,36 +13,35 @@ const Tags = ({ pageContext, data }) => {
       <h2>{`Tagged “${tag}”`}</h2>
       <Masonry>
         {edges.map(({ node }) => {
-          // const { slug } = node.fields
           return (
             <Item key={node.fields.slug}>
-              <Link to={node.fields.slug}>
-                <h3>{node.frontmatter.title}</h3>
-                {node.frontmatter.cover.extension === "jpg" && (
-                  <Img
-                    fluid={node.frontmatter.cover.childImageSharp.fluid}
-                    imgStyle={{ objectFit: "contain" }}
-                    alt={node.frontmatter.title}
-                  />
-                )}
-                {node.frontmatter.cover.extension === "gif" && (
-                  <img
-                    src={node.frontmatter.cover.publicURL}
-                    alt={node.frontmatter.title}
-                  />
-                )}
-                {node.frontmatter.cover.extension === "mp4" && (
-                  <video
-                    width="100%"
-                    loop
-                    autoPlay
-                    muted
-                    playsInline
-                    preload="none"
-                    src={node.frontmatter.cover.publicURL}
-                  />
-                )}
-              </Link>
+              <h3>
+                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+              </h3>
+              {node.frontmatter.cover.extension === "jpg" && (
+                <Img
+                  fluid={node.frontmatter.cover.childImageSharp.fluid}
+                  imgStyle={{ position: "static" }}
+                  alt={node.frontmatter.title}
+                />
+              )}
+              {node.frontmatter.cover.extension === "gif" && (
+                <img
+                  src={node.frontmatter.cover.publicURL}
+                  alt={node.frontmatter.title}
+                />
+              )}
+              {node.frontmatter.cover.extension === "mp4" && (
+                <video
+                  width="100%"
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="none"
+                  src={node.frontmatter.cover.publicURL}
+                />
+              )}
             </Item>
           )
         })}

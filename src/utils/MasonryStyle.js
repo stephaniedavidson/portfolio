@@ -1,39 +1,40 @@
 import styled from "styled-components"
 
-const Item = styled.div`
-  background: gold;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  overflow: visible;
+export const Item = styled.div`
+  transition: 0.2s;
+  justify-content: center;
+  align-content: center;
+  display: grid;
   cursor: pointer;
+  background: fuchsia;
   position: relative;
-  a {
-    background: greenyellow;
-  }
-  &:hover h3 {
-    opacity: 1;
+  .gatsby-image-wrapper > div[aria-hidden="true"] {
+    display: none;
   }
   img,
   video {
+    max-width: 100%;
     display: block;
-    width: 100%;
-  }
-  .gatsby-image-wrapper {
-    /* position: static !important; */
+    position: relative;
+    z-index: 0;
   }
   h3 {
-    transition: all 0.3s ease;
+    opacity: 0;
+    font-weight: normal;
     text-align: center;
+    width: 90%;
+    background: rgba(255, 255, 255, 1);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    z-index: 2;
-    /* padding: 10px; */
-    opacity: 0;
+    transform: translate(-50%, -100%);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  :hover {
+    transform: scale(1.05);
+    h3 {
+      opacity: 1;
+    }
   }
 `
-
-export default Item

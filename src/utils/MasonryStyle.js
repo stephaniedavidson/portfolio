@@ -6,7 +6,6 @@ export const Item = styled.div`
   align-content: center;
   display: grid;
   cursor: pointer;
-  background: fuchsia;
   position: relative;
   .gatsby-image-wrapper > div[aria-hidden="true"] {
     display: none;
@@ -30,6 +29,10 @@ export const Item = styled.div`
     transform: translate(-50%, -100%);
     transition: all 0.3s ease;
     z-index: 1;
+  }
+
+  a {
+    text-decoration: none;
   }
   :hover {
     transform: scale(1.05);

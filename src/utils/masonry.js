@@ -25,7 +25,7 @@ export default function Masonry({ children, gap, minWidth = 500, ...rest }) {
   fillCols(children, cols)
 
   const resizeHandler = () =>
-    setNumCols(Math.ceil(ref.current.offsetWidth / 450)) //set width here
+    setNumCols(Math.ceil(ref.current.offsetWidth / 500)) //set width here
   useEffect(resizeHandler, [])
   useEventListener(`resize`, resizeHandler)
 

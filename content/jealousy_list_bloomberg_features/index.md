@@ -1,12 +1,14 @@
 ---
 date: 2020-06-19T18:55:11.189Z
-title: Jealousy List Bloomberg features
+title: Jealousy List features
 tags:
   - design
   - code
   - illustration
 cover: jealousylist.gif
 ---
+Each year Bloomberg collects a list of articles the writer and editors are jealous of.
+
 ![jealousy list](jealousy-list2019.jpg "jealousy list")
 
 ![jealousy list](jealousy-list2018.jpg "jealousy list")

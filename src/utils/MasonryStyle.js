@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Item = styled.div`
+const Item = styled.div`
   transition: 0.2s;
   justify-content: center;
   align-content: center;
@@ -41,3 +41,5 @@ export const Item = styled.div`
     }
   }
 `
+
+export default Item

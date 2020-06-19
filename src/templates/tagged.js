@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout.js"
 import Masonry from "../utils/masonry"
-import { Item } from "../utils/masonryStyle"
+import Item from "../utils/masonryStyle"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext

@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Masonry from "../utils/masonry"
-import { Item } from "../utils/masonryStyle"
+import Item from "../utils/masonryStyle"
 
 const Blog = props => {
   const { data } = props

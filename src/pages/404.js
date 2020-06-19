@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import fourofour from "./404.jpg"
 
 class NotFoundPage extends React.Component {
   render() {
@@ -12,8 +13,8 @@ class NotFoundPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="404: Not Found" />
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <h1>Im so sorry.... this page does not exist</h1>
+        <img src={fourofour} alt="missing page" />
       </Layout>
     )
   }

@@ -7,13 +7,11 @@ tags:
   - illustration
 cover: jealousylist.gif
 ---
+![jealousy list](jealousy-list2019.jpg "jealousy list")
 
+![jealousy list](jealousy-list2018.jpg "jealousy list")
 
-![](jealousy-list2019.jpg)
-
-![](jealousy-list2018.jpg)
-
-![](jealousy-list2016.jpg)
+![jealousy list](jealousy-list2016.jpg "jealousy list")
 
 \
 \

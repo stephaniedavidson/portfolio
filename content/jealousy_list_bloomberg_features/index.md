@@ -1,5 +1,5 @@
 ---
-date: 2020-06-19T18:55:11.189Z
+date: 2019-10-22T18:55:11.189Z
 title: Jealousy List features
 tags:
   - design

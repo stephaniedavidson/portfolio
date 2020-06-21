@@ -92,14 +92,14 @@ const Li = styled.li`
   a {
     text-decoration: none;
     font-size: 2rem;
-    color: black;
+    color: black !important;
     transition: all 0.25s ease;
     &:hover {
-      color: crimson;
+      color: crimson !important;
     }
   }
   .active {
-    color: crimson;
+    color: crimson !important;
     text-decoration: underline;
   }
   img {

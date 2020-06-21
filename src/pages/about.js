@@ -61,6 +61,21 @@ class About extends React.Component {
           </ul>
         </section>
         <section>
+          <h2>My rig</h2>
+          <ul>
+            <li>Thermaltake Core P3 Snow Edition ATX</li>
+            <li>AMD Ryzen 7 3700x</li>
+            <li>Gigabyte X570 Aorus Ultra ATX AM4</li>
+            <li>G.Skill Trident Z RGB 16GB x 4</li>
+            <li>Asus GeForce RTX 2080 Ti</li>
+            <li>Thermaltake Toughpower Grand RGB 850W PSU</li>
+            <li>Samsung 970 Pro 512GB M.2 SSD</li>
+            <li>Western Digital Caviar Black 500gb</li>
+            <li>Aliexpress dust cover (purple)</li>
+          </ul>
+          <img src={hog} alt="my rendering hog" style={{ width: 300 }} />
+        </section>
+        <section>
           <h2>Cool links</h2>
           <ul>
             <li>

@@ -14,34 +14,36 @@ class ProjectTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
-        <Cover>
-          {post.frontmatter.cover.extension === "jpg" && (
-            <Img
-              fluid={post.frontmatter.cover.childImageSharp.fluid}
-              alt={post.frontmatter.title}
-            />
-          )}
-          {post.frontmatter.cover.extension === "mp4" && (
-            <video
-              width="100%"
-              loop
-              autoPlay
-              muted
-              playsInline
-              preload="none"
-              src={post.frontmatter.cover.publicURL}
-            />
-          )}
-          {post.frontmatter.cover.extension === "gif" && (
-            <img
-              src={post.frontmatter.cover.publicURL}
-              alt={post.frontmatter.title}
-            />
-          )}
-        </Cover>
-        <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <Body>
+          <Cover>
+            {post.frontmatter.cover.extension === "jpg" && (
+              <Img
+                fluid={post.frontmatter.cover.childImageSharp.fluid}
+                alt={post.frontmatter.title}
+              />
+            )}
+            {post.frontmatter.cover.extension === "mp4" && (
+              <video
+                width="100%"
+                loop
+                autoPlay
+                muted
+                playsInline
+                preload="none"
+                src={post.frontmatter.cover.publicURL}
+              />
+            )}
+            {post.frontmatter.cover.extension === "gif" && (
+              <img
+                src={post.frontmatter.cover.publicURL}
+                alt={post.frontmatter.title}
+              />
+            )}
+          </Cover>
+          <h1>{post.frontmatter.title}</h1>
+          {post.frontmatter.date}
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </Body>
       </Layout>
     )
   }
@@ -81,4 +83,13 @@ export const pageQuery = graphql`
 const Cover = styled.div`
   width: 100%;
   margin: 2rem 0;
+`
+const Body = styled.div`
+  max-width: 1400px;
+  h1 {
+    margin: 0;
+  }
+  .gatsby-resp-image-wrapper {
+    margin: 0 !important;
+  }
 `

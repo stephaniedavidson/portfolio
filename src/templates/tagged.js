@@ -53,7 +53,7 @@ const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges } = data.allMdx
   return (
-    <Layout>
+    <Layout wrapperwidth="100%">
       <h2>{`Tagged “${tag}”`}</h2>
       <Masonry>
         {edges.map(({ node }) => {

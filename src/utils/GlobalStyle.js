@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
   }
   h1, h2, h3{
-    font-weight: normal
+    font-weight: normal;
   }
   h1{font-size: 3.5rem}
   h2{font-size: 2.5rem}
@@ -20,6 +20,8 @@ const GlobalStyle = createGlobalStyle`
     line-height: 2rem;
   }
   li{margin-top: .5rem;}
+  a{color:blue}
+  a:visited{color:blue}
 `
 
 export default GlobalStyle

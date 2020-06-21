@@ -6,8 +6,6 @@ import SEO from "../components/seo"
 import Masonry from "../utils/masonry"
 import styled from "styled-components"
 
-// import Item from "../utils/masonryStyle"
-
 const Item = styled.div`
   transition: 0.2s;
   justify-content: center;
@@ -37,6 +35,7 @@ const Item = styled.div`
     transform: translate(-50%, -100%);
     transition: all 0.3s ease;
     z-index: 1;
+    padding: 1rem;
   }
 
   a {
@@ -54,10 +53,11 @@ const Blog = props => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
+  const fullwidth = "100%"
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout location={props.location} title={siteTitle} wrapperwidth="100%">
       <SEO title="All posts" />
-      <Masonry>
+      <Masonry minWidth={700}>
         {posts.map(({ node }) => {
           return (
             <Link to={`${node.fields.slug}`}>

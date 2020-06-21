@@ -20,8 +20,8 @@ const Layout = props => {
 }
 
 const Wrapper = styled.div`
+  /* max-width: ${props => props.wrapperwidth || `1800px`}; */
   padding: 1rem;
-  max-width: 1800px;
   font-size: 1.25rem;
   img,
   video {

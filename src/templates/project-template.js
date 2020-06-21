@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
+import Body from "../utils/BodyStyle"
 
 class ProjectTemplate extends React.Component {
   render() {
@@ -84,12 +85,12 @@ const Cover = styled.div`
   width: 100%;
   margin: 2rem 0;
 `
-const Body = styled.div`
-  max-width: 1400px;
-  h1 {
-    margin: 0;
-  }
-  .gatsby-resp-image-wrapper {
-    margin: 0 !important;
-  }
-`
+// const Body = styled.div`
+//   max-width: 1400px;
+//   h1 {
+//     margin: 0;
+//   }
+//   .gatsby-resp-image-wrapper {
+//     margin: 0 !important;
+//   }
+// `

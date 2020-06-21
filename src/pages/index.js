@@ -53,7 +53,6 @@ const Blog = props => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
-  const fullwidth = "100%"
   return (
     <Layout location={props.location} title={siteTitle} wrapperwidth="100%">
       <SEO title="All posts" />

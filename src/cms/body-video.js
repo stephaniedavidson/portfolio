@@ -31,7 +31,6 @@ export const EditorComponentVideo = {
         width="100%"
         controls
         type="video/mp4"
-        width="100%"
         loop
         autoPlay
         muted

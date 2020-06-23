@@ -1,10 +1,24 @@
 import { createGlobalStyle } from "styled-components"
+import InterRegular from "./Inter-Regular.woff"
+import InterItalic from "./Inter-Italic.woff"
+import InterBold from "./Inter-Bold.woff"
+import InterBoldItalic from "./Inter-BoldItalic.woff"
 
 const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
     font-size: 100%;
+    font-family: InterRegular, 'Helvetica', sans-serif;
+  }
+  strong{
+    font-family: ${InterBold};
+  }
+  em{
+    font-family: ${InterItalic};
+  }
+  strong em{
+    font-family: ${InterBoldItalic};
   }
   *{
       box-sizing: border-box;

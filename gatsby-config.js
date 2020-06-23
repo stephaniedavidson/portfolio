@@ -3,7 +3,7 @@ module.exports = {
     title: `Steph Davidson | design motion and code`,
     author: `Steph Davidson`,
     description: `portfolio`,
-    siteUrl: `https://lorem.com/`,
+    siteUrl: `http://stephdavidson.com/`,
     social: {
       twitter: `stephcd`,
     },

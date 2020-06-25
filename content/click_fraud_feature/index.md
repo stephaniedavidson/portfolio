@@ -7,8 +7,6 @@ tags:
   - code
 cover: bannerdivider2.gif
 ---
-Bloomberg feature about gaming clicks. 
+Bloomberg feature about gaming clicks.  [Source](https://www.bloomberg.com/features/2015-click-fraud/)
 
 ![click farms](click_farms.gif)
-
-[Source](https://www.bloomberg.com/features/2015-click-fraud/)

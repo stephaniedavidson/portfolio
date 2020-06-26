@@ -55,12 +55,12 @@ const Blog = props => {
   const posts = data.allMdx.edges
   return (
     <Layout location={props.location} title={siteTitle} wrapperwidth="100%">
-      <SEO title="All posts" />
+      <SEO title="Portfolio" />
       <Masonry minWidth={700}>
         {posts.map(({ node }) => {
           return (
-            <Link to={`${node.fields.slug}`}>
-              <Item key={node.fields.slug}>
+            <Link to={`${node.fields.slug}`} key={node.fields.slug}>
+              <Item>
                 <h3>{node.frontmatter.title}</h3>
                 {node.frontmatter.cover.extension === "jpg" && (
                   <Img

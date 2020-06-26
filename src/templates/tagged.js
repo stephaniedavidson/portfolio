@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout.js"
 import Masonry from "../utils/masonry"
 import styled from "styled-components"
+import SEO from "../components/seo"
 
 // import Item from "../utils/masonryStyle"
 
@@ -54,6 +55,7 @@ const Tags = ({ pageContext, data }) => {
   const { edges } = data.allMdx
   return (
     <Layout wrapperwidth="100%">
+      <SEO title={`Tagged “${tag}”`} />
       <h2>{`Tagged “${tag}”`}</h2>
       <Masonry>
         {edges.map(({ node }) => {

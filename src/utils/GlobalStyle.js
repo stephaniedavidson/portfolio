@@ -12,13 +12,13 @@ const GlobalStyle = createGlobalStyle`
     font-family: InterRegular, 'Helvetica', sans-serif;
   }
   strong{
-    font-family: ${InterBold};
+    font-family: InterBold;
   }
   em{
-    font-family: ${InterItalic};
+    font-family: InterItalic;
   }
   strong em{
-    font-family: ${InterBoldItalic};
+    font-family: InterBoldItalic;
   }
   *{
       box-sizing: border-box;

@@ -1,5 +1,5 @@
 ---
-date: 2020-06-27T23:38:49.266Z
+date: 2019-03-15T23:38:49.266Z
 title: Animated Businessweek Covers
 tags:
   - motion

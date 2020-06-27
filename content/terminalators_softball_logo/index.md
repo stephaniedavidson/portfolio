@@ -5,5 +5,9 @@ tags:
   - illustration
 cover: logo.jpg
 ---
+<<<<<<< HEAD
 
 Logo for Bloomberg Terminalators softball team
+=======
+Logo for Bloomberg Terminalators softball team. Pen on paper.
+>>>>>>> 71066b2ae449eeec5d521d774b980e3bf5ab9d23

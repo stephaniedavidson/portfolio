@@ -1,5 +1,5 @@
 ---
-date: 2020-06-25T05:24:13.187Z
+date: 2016-03-09T06:24:13.187Z
 title: Click Fraud feature
 tags:
   - design

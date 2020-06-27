@@ -1,6 +1,6 @@
 # https://www.netlifycms.org/docs/configuration-options/
 backend:
-  name: git-gateway
+  name: github
   repo: stephaniedavidson/portfolio
   branch: master
 

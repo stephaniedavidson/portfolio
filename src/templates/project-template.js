@@ -70,7 +70,7 @@ export const pageQuery = graphql`
           extension
           publicURL
           childImageSharp {
-            fluid(maxWidth: 1800) {
+            fluid(maxWidth: 1800, quality: 95) {
               ...GatsbyImageSharpFluid
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
@@ -85,12 +85,3 @@ const Cover = styled.div`
   width: 100%;
   margin: 2rem 0;
 `
-// const Body = styled.div`
-//   max-width: 1400px;
-//   h1 {
-//     margin: 0;
-//   }
-//   .gatsby-resp-image-wrapper {
-//     margin: 0 !important;
-//   }
-// `

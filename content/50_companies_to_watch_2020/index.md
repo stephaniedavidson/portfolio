@@ -1,6 +1,6 @@
 ---
 date: 2020-06-27T19:50:46.758Z
-title: 50 Companies to Watch 2020
+title: 50 Companies to Watch
 tags:
   - motion
 cover: 50-cos.mp4

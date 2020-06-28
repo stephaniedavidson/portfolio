@@ -1,5 +1,5 @@
 ---
-date: 2020-06-28T17:55:13.785Z
+date: 2017-06-07T17:55:13.785Z
 title: Ripley vs Uber gif
 tags:
   - motion

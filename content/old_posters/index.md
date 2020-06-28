@@ -5,7 +5,11 @@ tags:
   - illustration
 cover: extermination_night.jpg
 ---
+
+
 ![nicky da b](nickydab.jpg "nicky da b")
+
+![reading nook](readingnook_rgb_lg.jpg "reading nook")
 
 ![poster](geary.jpg "poster")
 
@@ -14,3 +18,5 @@ cover: extermination_night.jpg
 ![godstopper logo](godstopper.jpg "godstopper logo")
 
 ![grunge texture](grungetexture.jpg "grunge texture")
+
+![](radrit_tapecover1.jpg)

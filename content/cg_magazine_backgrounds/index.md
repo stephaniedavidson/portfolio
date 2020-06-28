@@ -5,6 +5,6 @@ tags:
   - illustration
 cover: fashion.jpg
 ---
-Backgrounds for BW Luxury stories.
+C4D backgrounds for BW Luxury stories.
 
-![](pens.jpg)
+![background for mag](pens.jpg "background for mag")

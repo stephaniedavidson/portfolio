@@ -5,6 +5,34 @@ import InterBold from "./Inter-Bold.woff"
 import InterBoldItalic from "./Inter-BoldItalic.woff"
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+      font-family: 'InterRegular';
+      src: local('InterRegular'),
+      url(${InterRegular}) format('woff');
+      font-weight: 300;
+      font-style: normal;
+  }
+  @font-face {
+      font-family: 'InterBold';
+      src: local('InterBold'),
+      url(${InterBold}) format('woff');
+      font-weight: 700;
+      font-style: bold;
+  }
+  @font-face {
+      font-family: 'InterItalic';
+      src: local('InterItalic'),
+      url(${InterItalic}) format('woff');
+      font-weight: 300;
+      font-style: italic;
+  }
+  @font-face {
+      font-family: 'InterBoldItalic';
+      src: local('InterBoldItalic'),
+      url(${InterBoldItalic}) format('woff');
+      font-weight: 700;
+      font-style: normal;
+  }
   body {
     padding: 0;
     margin: 0;

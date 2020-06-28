@@ -3,9 +3,9 @@ date: 2010-03-18T18:05:44.616Z
 title: Old posters
 tags:
   - illustration
-cover: nickydab.jpg
+cover: extermination_night.jpg
 ---
-
+![nicky da b](nickydab.jpg "nicky da b")
 
 ![poster](geary.jpg "poster")
 

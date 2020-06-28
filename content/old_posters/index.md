@@ -5,8 +5,6 @@ tags:
   - illustration
 cover: extermination_night.jpg
 ---
-
-
 ![nicky da b](nickydab.jpg "nicky da b")
 
 ![reading nook](readingnook_rgb_lg.jpg "reading nook")
@@ -20,3 +18,5 @@ cover: extermination_night.jpg
 ![grunge texture](grungetexture.jpg "grunge texture")
 
 ![](radrit_tapecover1.jpg)
+
+![](riso_poster.jpg)

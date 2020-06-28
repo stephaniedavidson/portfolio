@@ -8,6 +8,12 @@ const Body = styled.div`
   .gatsby-resp-image-wrapper {
     margin: 0 !important;
   }
+  sup {
+    background: black;
+    color: white;
+    font-size: 1.6rem;
+    padding: 0.1rem 0.4rem;
+  }
 `
 
 export default Body

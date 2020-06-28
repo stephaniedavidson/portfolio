@@ -6,7 +6,8 @@ tags:
   - animation
 cover: russia.gif
 ---
-Various animated Businessweek covers for social. Mostly After Effects. 
+
+Various animated Businessweek covers for social. Mostly After Effects.
 
 ![bitcoin cover](bitcoin.gif "bitcoin cover")
 

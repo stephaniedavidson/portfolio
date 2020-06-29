@@ -90,6 +90,12 @@ class About extends React.Component {
                 <a href="http://www.wilsoncameron.com/">Wilson Cameron</a>
               </li>
               <li>
+                <a href="http://lpredy.net/">Leslie Predy</a>
+              </li>
+              <li>
+                <a href="https://sshh.nyc/">SSHH</a>
+              </li>
+              <li>
                 <a href="http://laurelschwulst.com/">Laurel Schwulst</a>
               </li>
               <li>
@@ -98,6 +104,10 @@ class About extends React.Component {
               <li>
                 <a href="http://www.lifeofacraphead.com/">Life of a Craphead</a>
               </li>
+              <li>
+                <a href="https://badbadbadbad.com/">Braulio Amado</a>
+              </li>
+              <li>
               <li>
                 <a href="http://cdxs.ist/">CDXS</a>
               </li>
@@ -117,6 +127,9 @@ class About extends React.Component {
                 <a href="https://coombs-schwulst-seu.com/">
                   CSS Inc (consulting)
                 </a>
+              </li>
+              <li>
+                <a href="http://bong.international/">Bong International</a>
               </li>
             </ul>
           </section>

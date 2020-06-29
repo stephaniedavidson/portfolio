@@ -96,10 +96,27 @@ class About extends React.Component {
                 <a href="https://jamespants.com/">James Pants</a>
               </li>
               <li>
+                <a href="http://www.lifeofacraphead.com/">Life of a Craphead</a>
+              </li>
+              <li>
                 <a href="http://cdxs.ist/">CDXS</a>
               </li>
               <li>
                 <a href="http://www.txtbooks.us/">TXTbooks</a>
+              </li>
+              <li>
+                <a href="https://roadtolarissa.com/">Adam Pearce</a>
+              </li>
+              <li>
+                <a href="https://www.tophtucker.com/">Toph Tucker</a>
+              </li>
+              <li>
+                <a href="http://www.juliapanek.com/">Julia Panek</a>
+              </li>
+              <li>
+                <a href="https://coombs-schwulst-seu.com/">
+                  CSS Inc (consulting)
+                </a>
               </li>
             </ul>
           </section>

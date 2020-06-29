@@ -42,7 +42,7 @@ const Item = styled.div`
     text-decoration: none;
   }
   :hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     h3 {
       opacity: 1;
     }

@@ -17,7 +17,7 @@ function Header() {
         </Li>
         <Li>
           <Link to="/tagged/design" activeClassName="active">
-            Design and programming
+            Design & development
           </Link>
         </Li>
         <Li>
@@ -29,11 +29,7 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Art direction&nbsp;
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAO0lEQVQoU2NkwA/+w6QZoQy4AJI+FDlkDoyNbAfIAJD4f3wKYYrAGgmZCFID1jBIFOILUbgbCYQ7AwMANv8RCL4FK5gAAAAASUVORK5CYII="
-              alt="icon"
-            />
+            Art direction↗
           </a>
         </Li>
         <Li>
@@ -42,11 +38,7 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Store&nbsp;
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAO0lEQVQoU2NkwA/+w6QZoQy4AJI+FDlkDoyNbAfIAJD4f3wKYYrAGgmZCFID1jBIFOILUbgbCYQ7AwMANv8RCL4FK5gAAAAASUVORK5CYII="
-              alt="icon"
-            />
+            Store↗
           </a>
         </Li>
         <Li>
@@ -87,28 +79,54 @@ const Ul = styled.ul`
 `
 const Li = styled.li`
   display: inline-block;
-  margin: 0 1rem;
+  margin: 0.25rem;
   padding: 6px;
+  @media (max-width: 800px) {
+    margin: 0.2rem 0.2rem 0.2rem 0;
+  }
   a {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 2px 14px;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: black !important;
     transition: all 0.25s ease;
+    white-space: nowrap;
     &:hover {
       color: crimson !important;
+      border: 2px solid crimson !important;
+    }
+    @media (max-width: 1810px) {
+      font-size: 1.6rem;
+    }
+    @media (max-width: 1706px) {
+      font-size: 2.1rem;
+      border-radius: 30px;
+    }
+    @media (max-width: 1300px) {
+      font-size: 2.7rem;
+    }
+    @media (max-width: 1200px) {
+      font-size: 3rem;
+      border-radius: 27px;
+    }
+    @media (max-width: 1135px) {
+      font-size: 2.4rem;
+    }
+    @media (max-width: 1050px) {
+      font-size: 2.1rem;
+    }
+    @media (max-width: 920px) {
+      font-size: 1.8rem;
+    }
+    @media (max-width: 735px) {
+      font-size: 1.3rem;
     }
   }
   .active {
     color: crimson !important;
-    text-decoration: underline;
-  }
-  img {
-    width: 20px;
-    height: 20px;
-    image-rendering: pixelated;
-  }
-  @media (max-width: 800px) {
-    margin: 0 6px 6px 0;
+    border: 2px solid crimson !important;
   }
 `
 

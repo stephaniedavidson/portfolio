@@ -33,10 +33,15 @@ const GlobalStyle = createGlobalStyle`
       font-weight: 700;
       font-style: normal;
   }
+  html{
+    font-size: 100%;
+    @media(max-width: 500px){
+      font-size: 80%;
+    }
+  }
   body {
     padding: 0;
     margin: 0;
-    font-size: 100%;
     font-family: InterRegular, 'Helvetica', sans-serif;
   }
   strong{

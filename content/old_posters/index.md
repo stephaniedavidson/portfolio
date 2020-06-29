@@ -7,7 +7,7 @@ cover: extermination_night.jpg
 ---
 ![nicky da b](nickydab.jpg "nicky da b")
 
-![reading nook](readingnook_rgb_lg.jpg "reading nook")
+![reading nook](readingnook_rgb_sm.jpg "reading nook")
 
 ![poster](geary.jpg "poster")
 

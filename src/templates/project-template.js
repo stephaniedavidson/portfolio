@@ -43,7 +43,7 @@ class ProjectTemplate extends React.Component {
           </Cover>
           <h1>
             {post.frontmatter.title}
-            <sup>{post.frontmatter.date}</sup>
+            &nbsp;<sup>{post.frontmatter.date}</sup>
           </h1>
 
           <MDXRenderer>{post.body}</MDXRenderer>

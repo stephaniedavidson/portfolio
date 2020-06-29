@@ -1,5 +1,5 @@
 ---
-date: 2020-06-16T00:30:45.201Z
+date: 2016-06-15T04:00:00.000Z
 title: Internet Explorer error page
 tags:
   - design

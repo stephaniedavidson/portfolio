@@ -1,5 +1,5 @@
 ---
-date: 2020-05-30T20:06:50.533Z
+date: 2015-05-13T04:00:00.000Z
 title: Snapchat feature
 tags:
   - design

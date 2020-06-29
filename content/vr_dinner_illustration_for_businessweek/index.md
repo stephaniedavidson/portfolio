@@ -6,3 +6,5 @@ tags:
 cover: vr-dinner.jpg
 ---
 Illustration for Businessweek about all the different VR goggles.
+
+![](dscf0712.jpg)

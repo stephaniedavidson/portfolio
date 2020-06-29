@@ -1,5 +1,5 @@
 ---
-date: 2020-06-29T01:35:11.790Z
+date: 2019-06-28T01:35:11.790Z
 title: Bread Clip Neue typeface
 tags:
   - design

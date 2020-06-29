@@ -1,5 +1,5 @@
 ---
-date: 2020-06-27T19:40:50.230Z
+date: 2015-06-27T04:00:00.000Z
 title: Businessweek Design Conference visuals 2015
 tags:
   - motion

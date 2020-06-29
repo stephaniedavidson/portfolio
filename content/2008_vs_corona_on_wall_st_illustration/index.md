@@ -1,6 +1,6 @@
 ---
 date: 2020-01-01T21:27:46.508Z
-title: 2008 vs Corona on Wall St illustration
+title: 2008 vs 2020 illustration
 tags:
   - illustration
 cover: crisis_v2_sm.gif

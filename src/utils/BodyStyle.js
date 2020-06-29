@@ -11,8 +11,8 @@ const Body = styled.div`
   sup {
     background: black;
     color: white;
-    font-size: 1.6rem;
-    padding: 0.1rem 0.4rem;
+    font-size: 1.4rem;
+    padding: 0 0.3rem;
   }
 `
 

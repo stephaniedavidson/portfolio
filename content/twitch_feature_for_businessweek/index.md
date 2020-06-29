@@ -7,3 +7,7 @@ tags:
 cover: twitch.jpg
 ---
 Online design for feature and design of custom font Curlz SD (extra curly). [Source](https://www.bloomberg.com/features/2015-the-big-business-of-twitch/)
+
+Print design by Tracy Ma using Curlz SD:
+
+![in print](dscf0696.jpg "in print")

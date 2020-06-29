@@ -108,7 +108,6 @@ class About extends React.Component {
                 <a href="https://badbadbadbad.com/">Braulio Amado</a>
               </li>
               <li>
-              <li>
                 <a href="http://cdxs.ist/">CDXS</a>
               </li>
               <li>

@@ -1,5 +1,5 @@
 ---
-date: 2020-05-30T20:12:35.376Z
+date: 2018-05-30T04:00:00.000Z
 title: Lonely Future of Buying Stuff feature
 tags:
   - design

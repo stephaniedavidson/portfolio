@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import fourofour from "./404.jpg"
+import witch from "./witch.jpg"
 
 class NotFoundPage extends React.Component {
   render() {
@@ -14,7 +14,7 @@ class NotFoundPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="404" />
         <h1>Im so sorry.... this page does not exist</h1>
-        <img src={fourofour} alt="missing page" />
+        <img src={witch} alt="missing page" />
       </Layout>
     )
   }

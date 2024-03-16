@@ -81,9 +81,6 @@ class About extends React.Component {
             <h2>Cool links</h2>
             <ul>
               <li>
-                <a href="https://scottgelber.com/">Scott Gelber</a>
-              </li>
-              <li>
                 <a href="http://tracyma.com/">Tracy Ma</a>
               </li>
               <li>
@@ -100,6 +97,11 @@ class About extends React.Component {
               </li>
               <li>
                 <a href="https://jamespants.com/">James Pants</a>
+              </li>
+              <li>
+                <a href="https://cargocollective.com/chrismaggio">
+                  Chris Maggio
+                </a>
               </li>
               <li>
                 <a href="http://www.lifeofacraphead.com/">Life of a Craphead</a>
